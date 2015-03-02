@@ -1,7 +1,6 @@
 # holylight
 
-A light colored theme for the Atom editor. It's loosely based on
-both Github and Gist themes.
+A light colored Atom syntax theme loosely based on both Github and Gist themes.
 
 ```bash
 apm install holylight
