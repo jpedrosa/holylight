@@ -1,0 +1,142 @@
+@import "colors";
+@import "syntax-variables";
+
+.editor-colors, :host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
+.editor, :host {
+  .invisible-character,
+  .indent-guide {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+  }
+
+  .gutter .line-number {
+    background:@syntax-gutter-background-color;
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @syntax-gutter-text-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+    color: @syntax-text-color;
+  }
+
+  .cursor-line {
+    background-color:@syntax-cursor-line;
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: @syntax-gutter-background-color-selected;
+    color:@syntax-gutter-text-color-selected;
+    opacity:1;
+  }
+}
+
+.bracket-matcher {
+  background-color: @syntax-indent-guide-color;
+  opacity: 0.7;
+}
+
+.comment {
+  color: @gray !important;
+  font-style: italic;
+}
+
+.punctuation {
+  color: @black;
+
+  &.separator {
+    font-weight: normal;
+  }
+}
+
+.entity {
+  color: @green;
+
+  &.class {
+    color: @blue;
+  }
+
+  &.inherited-class {
+    color: @cyan;
+    font-weight: normal;
+  }
+}
+
+.support.class {
+  color: @sea;
+  font-weight: normal;
+}
+
+.keyword {
+  color: @pink;
+}
+
+.storage.type {
+  color: @green;
+}
+
+.constant {
+  color: @sea;
+
+  &.numeric,
+  &.boolean {
+    color: @sea;
+  }
+}
+
+.variable {
+  color: @cyan;
+
+  &.parameter {
+    color: @black;
+  }
+}
+
+.delimiter, .brace {
+  color: @black;
+}
+
+.delimiter.period {
+  color: @black;
+}
+
+.invalid.deprecated {
+  text-decoration: underline;
+  color: @red;
+}
+
+.invalid.illegal {
+  color: @red;
+}
+
+.string {
+  color: @orange;
+
+  .constant.character.escape {
+    color: @red;
+  }
+
+  &.regexp {
+    color: @green;
+
+    .source.ruby.embedded,
+    .string.regexp.arbitrary-repitition {
+      color: @green;
+    }
+  }
+}
